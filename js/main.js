@@ -1,1 +1,1 @@
-"use strict";$((function(){$(".faq .ask").on("click",(function(){$(this).next().slideToggle(400)}))}));
+"use strict";function ibg(){$.each($(".ibg"),(function(i,s){$(this).find("img").length>0&&$(this).css("background-image",'url("'+$(this).find("img").attr("src")+'")')}))}$(".wrapper").addClass("loaded"),$(".icon-menu").click((function(i){$(this).toogleClass("active"),$(".menu__body").toogleClass("active"),$("body").toogleClass("lock")})),ibg();

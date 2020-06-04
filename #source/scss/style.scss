@@ -16,6 +16,8 @@ $minwidth: 320px;
 }
 
 @import "ui.scss";
+@import "header.scss";
+@import "footer.scss";
 
 .page {
 	position: absolute;

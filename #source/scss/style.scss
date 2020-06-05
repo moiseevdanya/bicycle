@@ -13,6 +13,7 @@ $minwidth: 320px;
 .container {
 	max-width: 1130px;
 	padding: 0 30px;
+	margin: 0 auto;
 }
 
 @import "ui.scss";
@@ -30,7 +31,7 @@ $minwidth: 320px;
 }
 
 .main-screen {
-	flex: 1 1 100%;
+	flex: 1 0 100%;
 	position: relative;
 
 	&__bg {
@@ -41,3 +42,117 @@ $minwidth: 320px;
 		left: 0;
 	}
 }
+
+.generation {
+	padding: 120px 0;
+	background-color: #f7f7f7;
+
+	&__block {}
+
+	@media (max-width:900px) {
+		padding: 80px 0;
+	}
+
+	@media (max-width:900px) {
+		padding: 30px 0;
+	}
+}
+
+//2 block
+.block {
+	text-align: center;
+
+	&__icon {
+		padding: 0 0 30px 0;
+	}
+
+	&__title {
+		color: #353738;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 24px;
+		text-transform: uppercase;
+		letter-spacing: 3.6px;
+		margin: 0 0 18px 0;
+	}
+
+	&__text {
+		color: #848789;
+		font-size: 18px;
+		line-height: 34px;
+
+		&_j {
+			text-align: justify;
+			font-size: 16px;
+			line-height: 30px;
+
+			&:after {
+				content: '';
+				display: block;
+				margin: 35px auto 0 auto;
+				width: 50px;
+				height: 1px;
+				background-color: #ebebeb;
+			}
+		}
+	}
+}
+
+//3 block
+.brands {
+
+	&__row {
+		display: flex;
+	}
+
+	&__column {
+		flex: 0 1 33.333%;
+
+		&_b {
+			flex: 0 1 66.667%;
+		}
+	}
+
+	&__item {}
+
+	&__content {
+		padding: 70px 65px 55px 65px;
+		position: relative;
+
+		//разрез в виде треугольника
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -10px;
+			left: 50%;
+			margin: 0px 0px 0px -10px;
+			width: 0;
+			height: 0;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 10px solid #fff;
+		}
+	}
+
+	&__image {
+		padding: 0px 0px 37.5% 0px;
+	}
+}
+
+.item {
+	height: 100%;
+	display: block;
+	position: relative;
+
+	&__logo {}
+
+	&__image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+
+.ibg {}

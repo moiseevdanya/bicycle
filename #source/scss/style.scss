@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
 
-$fontfamily:"Lato";
+$fontfamily: "Lato";
 $minwidth: 320px;
 
 @import "nullstyle.scss";
@@ -47,13 +47,11 @@ $minwidth: 320px;
 	padding: 120px 0;
 	background-color: #f7f7f7;
 
-	&__block {}
-
-	@media (max-width:900px) {
+	@media (max-width: 900px) {
 		padding: 80px 0;
 	}
 
-	@media (max-width:900px) {
+	@media (max-width: 900px) {
 		padding: 30px 0;
 	}
 }
@@ -87,7 +85,7 @@ $minwidth: 320px;
 			line-height: 30px;
 
 			&:after {
-				content: '';
+				content: "";
 				display: block;
 				margin: 35px auto 0 auto;
 				width: 50px;
@@ -96,10 +94,32 @@ $minwidth: 320px;
 			}
 		}
 	}
+
+	@media (max-width: 1500px) {
+		&__text {
+			&_j {
+				&:after {
+					margin: 15px auto 0 auto;
+				}
+			}
+		}
+	}
 }
 
 //3 block
 .brands {
+	&_rev {
+		.brands__column {
+			order: 1;
+
+			&_b {
+				order: 2;
+			}
+		}
+	}
+
+	&_last {
+	}
 
 	&__row {
 		display: flex;
@@ -113,7 +133,8 @@ $minwidth: 320px;
 		}
 	}
 
-	&__item {}
+	&__item {
+	}
 
 	&__content {
 		padding: 70px 65px 55px 65px;
@@ -121,7 +142,7 @@ $minwidth: 320px;
 
 		//разрез в виде треугольника
 		&:after {
-			content: '';
+			content: "";
 			position: absolute;
 			bottom: -10px;
 			left: 50%;
@@ -137,6 +158,31 @@ $minwidth: 320px;
 	&__image {
 		padding: 0px 0px 37.5% 0px;
 	}
+
+	@media (max-width: 1500px) {
+		&__content {
+			padding: 40px 35px 30px 35px;
+		}
+	}
+
+	@media (max-width: 1100px) {
+		&_last {
+			.brands__column {
+				&:nth-child(1) {
+					order: 2;
+				}
+				&:nth-child(2) {
+					order: 1;
+				}
+				&:nth-child(3) {
+					order: 3;
+				}
+			}
+		}
+		&__row {
+			flex-direction: column;
+		}
+	}
 }
 
 .item {
@@ -144,7 +190,21 @@ $minwidth: 320px;
 	display: block;
 	position: relative;
 
-	&__logo {}
+	&__logo {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display: flex;
+		transition: all 0.3s ease 0s;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(100, 194, 158, 0.5);
+		z-index: 2;
+		opacity: 0;
+		visibility: hidden;
+	}
 
 	&__image {
 		position: absolute;
@@ -153,6 +213,16 @@ $minwidth: 320px;
 		top: 0;
 		left: 0;
 	}
-}
 
-.ibg {}
+	&:hover {
+		.item__logo {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	@media (max-width: 1100px) {
+		height: auto;
+		padding: 0 0 70% 0;
+	}
+}

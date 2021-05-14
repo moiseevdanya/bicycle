@@ -1,6 +1,6 @@
 # bicycle
 
-Сайт
-Все исходники есть
+## Вёрстка
+
 результат:
 https://moiseevdanya.github.io/bicycle/
